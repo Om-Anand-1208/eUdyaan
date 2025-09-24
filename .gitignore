@@ -1,1 +1,31 @@
+# Gradle files
+.gradle/
+build/
+*/build/
+!gradle-wrapper.jar
+
+# Local configuration file (SDK path, etc.)
 local.properties
+
+# Log files
+*.log
+
+# Android Studio
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Keystore files (if you generate signing keys here, better to keep them private)
+*.jks
+*.keystore
+
+# External native build
+.cxx/
+
+# Generated files
+captures/
+output.json
+
+# Misc
+.DS_Store
