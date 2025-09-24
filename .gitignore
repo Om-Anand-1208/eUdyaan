@@ -1,31 +1,83 @@
-# Gradle files
+# =========================
+# Gradle
+# =========================
 .gradle/
 build/
 */build/
 !gradle-wrapper.jar
 
-# Local configuration file (SDK path, etc.)
+# Local configuration
 local.properties
 
-# Log files
+# Gradle daemon logs
+**/out/
+
+# =========================
+# Logs
+# =========================
 *.log
 
-# Android Studio
-.idea/
+# =========================
+# Android Studio / IntelliJ
+# =========================
+# Ignore all IDEA files
+.idea/*
+
+# Keep useful project-level configs
+!.idea/codeStyles/
+!.idea/runConfigurations/
+!.idea/inspectionProfiles/
+!.idea/vcs.xml
+
+# Ignore sensitive/user-specific files
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/gradle.xml
+.idea/libraries/
+.idea/deploymentTargetDropDown.xml
+.idea/assetWizardSettings.xml
+
+# Project/module files
 *.iml
 *.ipr
 *.iws
 
-# Keystore files (if you generate signing keys here, better to keep them private)
+# =========================
+# Kotlin / Java
+# =========================
+.kotlinc/
+.kotlin/
+*.class
+
+# =========================
+# Keystore (keep private!)
+# =========================
 *.jks
 *.keystore
 
+# =========================
 # External native build
+# =========================
 .cxx/
 
+# =========================
 # Generated files
+# =========================
 captures/
 output.json
+.intermediates/
 
-# Misc
+# APKs and build outputs
+*.apk
+*.ap_
+*.dex
+
+# Profiling & test outputs
+*.hprof
+*.ec
+
+# =========================
+# OS-specific
+# =========================
 .DS_Store
+Thumbs.db
