@@ -1,8 +1,8 @@
-# Eudyaan – Digital Mental Wellness Platform
+# eUdyaan – Digital Mental Wellness Platform
 
 ## Overview
 
-Eudyaan is an Android application focused on helping college students manage everyday stress and mental well-being. The idea was to create something simple and approachable, where users can reflect on their mood and seek support without feeling overwhelmed.
+eUdyaan is an Android application focused on helping college students manage everyday stress and mental well-being. The idea was to create something simple and approachable, where users can reflect on their mood and seek support without feeling overwhelmed.
 
 The project was first built during a hackathon and later improved to make the features more balanced and practical for real users.
 
@@ -10,7 +10,7 @@ The project was first built during a hackathon and later improved to make the fe
 
 ## Problem
 
-Many college students experience stress related to academics, relationships, and uncertainty about the future, but reaching out for help is often uncomfortable. Existing solutions can feel too complex or intimidating. Eudyaan tries to reduce this gap by offering easy-to-use tools for self-reflection and connection.
+Many college students experience stress related to academics, relationships, and uncertainty about the future, but reaching out for help is often uncomfortable. Existing solutions can feel too complex or intimidating. eUdyaan tries to reduce this gap by offering easy-to-use tools for self-reflection and connection.
 
 ---
 
