@@ -1,4 +1,4 @@
-**# Eudyaan – Digital Mental Wellness Platform**
+# Eudyaan – Digital Mental Wellness Platform
 
 ## Overview
 
