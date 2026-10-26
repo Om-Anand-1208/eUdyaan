@@ -9,16 +9,13 @@ eUdyaan is an Android mental-wellness app concept for students. It brings daily 
 The following screens were captured from the app running on Android_API36_Slim.
 
 <p align="center">
-  <img src="verification/final-slim-avd/home.png" alt="eUdyaan Home screen in dark mode" width="260" />
-  <img src="verification/final-slim-avd/settings.png" alt="Settings screen in dark mode" width="260" />
-  <img src="verification/final-slim-avd/privacy-after.png" alt="Privacy settings screen in dark mode" width="260" />
+  <img src="images/home.png" alt="eUdyaan Home screen in dark mode" width="200" />
+  <img src="images/settings.png" alt="Settings screen in dark mode" width="200" />
+  <img src="images/privacy-after.png" alt="Privacy settings screen in dark mode" width="200" />
+  <img src="images/write-post-named.png" alt="Community post composer showing the selected posting identity" width="200" />
 </p>
 
-<p align="center">
-  <img src="verification/final-slim-avd/write-post-named.png" alt="Community post composer showing the selected posting identity" width="260" />
-</p>
-
-More screen captures, including onboarding, sign-in, counsellor discovery, and dark-mode routes, are available in [`verification/`](verification/).
+More screen captures, including onboarding, sign-in, counsellor discovery, and dark-mode routes, are available in [`images/`](images/).
 
 ## Features
 
@@ -74,8 +71,7 @@ The sign-in and sign-up screens expect an account service at `http://10.0.2.2:50
 - `app/src/main/java/com/example/eudayan/redesign/` contains the Compose redesign and screens.
 - `app/src/main/res/drawable/` and `app/src/main/res/font/` contain reusable visual and typography assets.
 - `app/src/debug/` and `app/src/release/` hold build-variant font resources.
-- `verification/` contains emulator screenshots and interaction checks.
-- `eUdyaan-redesign-screens/` contains the supplied screen concept package.
+- `images/` contains emulator screenshots.
 
 ## Verification
 
