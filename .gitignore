@@ -71,6 +71,7 @@ output.json
 *.apk
 *.ap_
 *.dex
+!artifacts/eUdyaan.apk
 
 # Profiling & test outputs
 *.hprof

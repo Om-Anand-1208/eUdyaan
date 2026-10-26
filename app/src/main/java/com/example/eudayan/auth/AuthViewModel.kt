@@ -26,10 +26,10 @@ class AuthViewModel @Inject constructor(private val repository: AuthRepository) 
                 if (response.isSuccessful && response.body() != null) {
                     _authState.value = AuthState.Success(response.body()!!)
                 } else {
-                    _authState.value = AuthState.Error("Signup failed: ${response.message()}")
+                    _authState.value = AuthState.Error("Could not create your account. Check your details and try again.")
                 }
             } catch (e: Exception) {
-                _authState.value = AuthState.Error("An error occurred: ${e.message}")
+                _authState.value = AuthState.Error("The account service is unavailable. Please try again later or continue as a guest.")
             }
         }
     }
@@ -42,10 +42,10 @@ class AuthViewModel @Inject constructor(private val repository: AuthRepository) 
                 if (response.isSuccessful && response.body() != null) {
                     _authState.value = AuthState.Success(response.body()!!)
                 } else {
-                    _authState.value = AuthState.Error("Login failed: ${response.message()}")
+                    _authState.value = AuthState.Error("Could not sign in. Check your email and password.")
                 }
             } catch (e: Exception) {
-                _authState.value = AuthState.Error("An error occurred: ${e.message}")
+                _authState.value = AuthState.Error("The account service is unavailable. Please try again later or continue as a guest.")
             }
         }
     }

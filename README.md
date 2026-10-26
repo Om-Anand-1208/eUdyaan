@@ -1,60 +1,86 @@
-# eUdyaan – Digital Mental Wellness Platform
+# eUdyaan
 
-## Overview
+eUdyaan is an Android mental-wellness app concept for students. It brings daily reflection, peer connection, self-guided practices, and routes to counsellor support into one calm, accessible interface.
 
-eUdyaan is an Android application focused on helping college students manage everyday stress and mental well-being. The idea was to create something simple and approachable, where users can reflect on their mood and seek support without feeling overwhelmed.
+> This repository contains a functional prototype. Several experiences use local demo data and are not connected to live care, moderation, or account services.
 
-The project was first built during a hackathon and later improved to make the features more balanced and practical for real users.
+## App preview
 
----
+The following screens were captured from the app running on Android_API36_Slim.
 
-## Problem
+<p align="center">
+  <img src="verification/final-slim-avd/home.png" alt="eUdyaan Home screen in dark mode" width="260" />
+  <img src="verification/final-slim-avd/settings.png" alt="Settings screen in dark mode" width="260" />
+  <img src="verification/final-slim-avd/privacy-after.png" alt="Privacy settings screen in dark mode" width="260" />
+</p>
 
-Many college students experience stress related to academics, relationships, and uncertainty about the future, but reaching out for help is often uncomfortable. Existing solutions can feel too complex or intimidating. eUdyaan tries to reduce this gap by offering easy-to-use tools for self-reflection and connection.
+<p align="center">
+  <img src="verification/final-slim-avd/write-post-named.png" alt="Community post composer showing the selected posting identity" width="260" />
+</p>
 
----
+More screen captures, including onboarding, sign-in, counsellor discovery, and dark-mode routes, are available in [`verification/`](verification/).
 
 ## Features
 
-* Daily mood tracking that helps users notice patterns over time
-* An AI chatbot for basic conversational support
-* An anonymous community where users can share thoughts freely
-* Online consultation booking for professional support
+- Daily mood check-ins with a dated local mood log.
+- Community feed with post creation, replies, likes, sharing, and anonymous-by-default posting controls.
+- ManSathi chat experience with locally saved demo messages.
+- Guided breathing and meditation screens.
+- Counsellor directory, profile details, and a locally saved session request flow.
+- Profile and Settings screens for appearance, privacy, local data, personal details, account state, notifications, and app information.
+- Light and dark themes, with the dark-mode preference saved on the device.
+- Reusable illustrations and visual components for mood reactions, onboarding, the brand mark, and shared controls.
 
----
+## Download the debug build
 
-## Tech Stack
+[Download eUdyaan.apk](artifacts/eUdyaan.apk)
 
-* Kotlin
-* Jetpack Compose
-* Android Studio
+This is a debug APK for development and evaluation. It is not a signed production release.
 
----
+## Build and run
 
-## Privacy Considerations
+Requirements: Android Studio or the Android SDK, JDK 17, and an Android emulator or device.
 
-Since the application deals with sensitive information, care was taken to avoid storing unnecessary user data. The focus was on keeping interactions private and designing features responsibly, especially around mental health–related use cases.
+```bash
+ANDROID_HOME="$HOME/Android/Sdk" \
+ANDROID_SDK_ROOT="$HOME/Android/Sdk" \
+JAVA_HOME="/path/to/jdk-17" \
+bash gradlew --no-daemon assembleDebug
+```
 
----
+The generated debug package is `app/build/outputs/apk/debug/app-debug.apk`. The committed copy is at [`artifacts/eUdyaan.apk`](artifacts/eUdyaan.apk).
 
-## What I Learned
+## Technology
 
-* Building modern Android UIs using Jetpack Compose
-* Designing features with user comfort and ethics in mind
-* Making trade-offs between feature scope and usability
-* Understanding how privacy concerns affect technical decisions
+- Kotlin
+- Jetpack Compose and Material 3
+- Android Gradle Plugin and Gradle Wrapper
+- SharedPreferences for the current local prototype state
 
----
+## Design and typography
 
-## Future Scope
+The interface uses a warm ivory and sage palette in light mode and a deep green palette in dark mode. Rubik is the app-wide typeface. The supplied Awesome font is used for the eUdyaan wordmark in debug builds only; its license requires written permission for commercial mobile apps. Release builds use Rubik Bold for the wordmark until a commercial license is available. Font license files are in [`licenses/`](licenses/).
 
-* Better personalization based on user behavior
-* Improved moderation and reporting for the community feature
-* Exploring scalable backend solutions if the user base grows
+The app keeps the original wreath identity and uses a refined wreath variant across its wordmark, splash screen, and adaptive launcher icon. Onboarding uses outlined-character illustrations to explain mood check-ins, community, and support.
 
----
+## Prototype behavior and limitations
 
-## Project Status
+Community posts, likes, replies, chat messages, mood entries, profile preferences, and session requests are currently stored on the device for demonstration. A saved session request does not mean a counsellor received or confirmed it. Sample counsellor listings do not represent real availability or credentials.
 
-Completed, with scope for further improvement
+The sign-in and sign-up screens expect an account service at `http://10.0.2.2:5000/` in debug builds. Guest access is available without that service. A public release needs a deployed HTTPS service, reviewed secure storage and retention controls, real appointment availability, community moderation and reporting, and a clinically reviewed support experience. Do not use this prototype as a substitute for professional or emergency care.
 
+## Project structure
+
+- `app/src/main/java/com/example/eudayan/redesign/` contains the Compose redesign and screens.
+- `app/src/main/res/drawable/` and `app/src/main/res/font/` contain reusable visual and typography assets.
+- `app/src/debug/` and `app/src/release/` hold build-variant font resources.
+- `verification/` contains emulator screenshots and interaction checks.
+- `eUdyaan-redesign-screens/` contains the supplied screen concept package.
+
+## Verification
+
+The debug variant was built and installed on Android_API36_Slim. The app was launched, and the Home, Settings, Privacy, and Community composer screens were captured. The anonymous-posting setting was toggled and confirmed to change the composer label. Dark mode and local persistence flows were also checked during emulator review.
+
+## License
+
+No repository-wide open-source license is currently specified. Included third-party fonts retain their individual license terms in [`licenses/`](licenses/). Review asset and font rights before redistribution or commercial release.
